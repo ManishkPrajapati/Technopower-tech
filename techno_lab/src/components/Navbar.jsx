@@ -1,11 +1,12 @@
 import React from 'react';
+import logo from '../assets/icons/logo.jpg';
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light sticky-top">
       <div className="container">
         <a className="navbar-brand" href="#home">
-          <img src="src/assets/icons/logo.jpg" alt="Logo" height="90" />
+          <img src={logo} alt="Logo" height="90" />
         </a>
         <button
           className="navbar-toggler"

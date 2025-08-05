@@ -7,6 +7,7 @@ import {
   FaPhoneVolume,
   FaClock
 } from 'react-icons/fa';
+import logo from '../assets/icons/logo.jpg';
 
 function Footer() {
   return (
@@ -16,7 +17,7 @@ function Footer() {
           {/* Logo and Description */}
           <div className="col-lg-3 col-md-6 mb-4 border-end">
             <img
-              src="src/assets/icons/logo.jpg"
+              src={logo}
               alt="TechnoPower Lab Logo"
               className="mb-2"
               style={{ maxHeight: 60 }}
