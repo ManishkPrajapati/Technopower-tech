@@ -1,0 +1,12 @@
+.carousel-control-prev-icon.custom-arrow,
+.carousel-control-next-icon.custom-arrow {
+  background-color: rgb(198, 193, 193);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-size: 60% 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-color 0.3s ease;
+}
+
