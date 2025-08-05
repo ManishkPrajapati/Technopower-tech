@@ -1,5 +1,5 @@
 import React from 'react';
-import machine1 from '../assets/images/machine1.jpg';
+import machine1 from '../assets/images/testing.jpg';
 
 const services = [
   {
