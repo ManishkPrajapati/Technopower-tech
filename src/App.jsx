@@ -6,16 +6,18 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import TopBar from './components/TopBar';
 import ContactSection from './components/ContactSection.jsx';
+import LabSection from './components/LabSection.jsx';
 
 function App() {
   return (
     <>
-      <TopBar />
       <Navbar />
+
       <HeroSlider />
+      <About />
 
       <section id="about">
-        <About />
+        <LabSection />
       </section>
 
       <section id="services">
@@ -23,10 +25,8 @@ function App() {
       </section>
 
       <section id="contact">
-        <ContactSection />
+        <Footer />
       </section>
-
-      <Footer />
     </>
   );
 }

@@ -19,7 +19,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section className="py-5 bg-light">
+    <section id="contact" >
       <div className="container text-center">
         <p className="text-uppercase small text-muted fw-semibold">
           <span className="me-1 text-warning">▴</span> Connect with us

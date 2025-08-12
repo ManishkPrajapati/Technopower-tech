@@ -1,0 +1,268 @@
+/* Lab Section Wrapper */
+.lab-section-wrapper {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f1f3f4 100%);
+  position: relative;
+}
+
+.lab-section-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23f0f0f0" opacity="0.3"/><circle cx="75" cy="75" r="1" fill="%23f0f0f0" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.lab-section {
+  position: relative;
+  z-index: 1;
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+}
+
+.lab-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 2;
+}
+
+.certification-badge {
+  background: rgba(56, 99, 191, 0.95);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(56, 99, 191, 0.3);
+}
+
+.badge-icon {
+  font-size: 1.1rem;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+  padding-left: 2rem;
+}
+
+/* Section Header */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  position: relative;
+  line-height: 1.2;
+}
+
+.title-accent {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #3863bf, #8B4513);
+  border-radius: 2px;
+}
+
+.subtitle-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #3863bf, #4a7bc8);
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 3px 10px rgba(56, 99, 191, 0.3);
+}
+
+/* Content Body */
+.content-body {
+  color: #555;
+}
+
+.main-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: #6c757d;
+}
+
+.main-description strong {
+  color: #3863bf;
+  font-weight: 600;
+}
+
+/* Certification Details */
+.certification-details {
+  margin-bottom: 2.5rem;
+}
+
+.cert-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding: 0.5rem 0;
+}
+
+.cert-icon {
+  color: #28a745;
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.cert-item span {
+  color: #495057;
+  font-size: 0.95rem;
+}
+
+.cert-item strong {
+  color: #2c3e50;
+}
+
+/* CTA Section */
+.cta-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.lab-cta-button {
+  background: linear-gradient(135deg, #3863bf, #4a7bc8);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(56, 99, 191, 0.3);
+}
+
+.lab-cta-button:hover {
+  background: linear-gradient(135deg, #2952a3, #3863bf);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 99, 191, 0.4);
+}
+
+.lab-outline-button {
+  border: 2px solid #3863bf;
+  color: #3863bf;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.lab-outline-button:hover {
+  background: #3863bf;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(56, 99, 191, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding-left: 0;
+    margin-top: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .title-accent {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .subtitle-badge {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .main-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .certification-details {
+    text-align: center;
+  }
+  
+  .cert-item {
+    justify-content: center;
+  }
+  
+  .cta-section {
+    justify-content: center;
+  }
+  
+  .image-container {
+    margin-bottom: 1rem;
+  }
+  
+  .certification-badge {
+    position: static;
+    display: inline-flex;
+    margin-top: 1rem;
+  }
+  
+  .image-overlay {
+    position: static;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+  
+  .lab-cta-button,
+  .lab-outline-button {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cta-section {
+    flex-direction: column;
+  }
+}

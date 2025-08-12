@@ -4,7 +4,7 @@ import { FaPhone, FaEnvelope, FaDownload, FaPaperPlane } from 'react-icons/fa';
 
 const TopBar = () => {
   return (
-    <div className="bg-lightblue text-white py-2 px-3">
+    <div className="topbar">
       <div className="container-fluid">
         <div className="d-flex flex-column flex-md-row justify-content-between align-items-center text-center text-md-start gap-2 gap-md-0">
           <div className="px-md-2">

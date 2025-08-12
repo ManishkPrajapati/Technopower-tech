@@ -1,0 +1,78 @@
+.info-section {
+  background: white;
+  padding: 0;
+}
+
+.info-box {
+  text-align: left;
+  padding: 20px 15px;
+  border-right: 1px solid #eee;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.info-box:last-child {
+  border-right: none;
+}
+
+.info-box:hover {
+  background-color: #f8f9fa;
+}
+
+.info-icon {
+  font-size: 40px;
+  color: #8B4513; /* Brown color to match your theme */
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-box h5 {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.info-box p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .info-box {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    padding: 15px 10px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+  
+  .info-box:last-child {
+    border-bottom: none;
+  }
+  
+  .info-icon {
+    font-size: 35px;
+    margin-top: 0;
+  }
+  
+  .info-box h5 {
+    font-size: 1rem;
+  }
+  
+  .info-box p {
+    font-size: 0.85rem;
+  }
+}

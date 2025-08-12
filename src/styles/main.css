@@ -3,21 +3,31 @@ body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color: #f5f7fa;
 }
 
+/* Standard section spacing */
 section {
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
-.carousel-item img {
-  height: 500px;
-  object-fit: cover;
+/* Navbar styles */
+.topbar {
+  background-color: #1c4976;
+  color: white;
+  padding: 5px 0;
 }
 
-footer {
-  background-color: #f8f9fa;
-  color: #333;
-  border-top: 1px solid #dee2e6;
+.navbar {
+  background-color: #133b64;
+}
+
+.nav-link, .navbar-brand {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffcc00 !important;
 }
 
 .navbar-brand img {
@@ -25,15 +35,15 @@ footer {
   object-fit: contain;
 }
 
+/* Card styles */
 .card-title {
   font-weight: 600;
 }
 
-.counter {
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.bg-lightblue {
-  background-color: #5bc0de; /* You can change this shade if needed */
+/* Images */
+section img {
+  background-color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }

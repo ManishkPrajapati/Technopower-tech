@@ -1,72 +1,222 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import {
   FaFacebook,
   FaInstagram,
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhoneVolume,
-  FaClock
+  FaClock,
+  FaPaperPlane,
+  FaCheckCircle
 } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import logo from '../assets/icons/logo.jpg';
+import "../styles/Footer.css"
 
 function Footer() {
+  const form = useRef();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('');
+
+    try {
+      await emailjs.sendForm('service_rsv62gk', 'template_hrhm8xq', form.current, '1SvseIpC3Fj_94IWs');
+      setSubmitStatus('success');
+      form.current.reset();
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(''), 3000);
+    }
+  };
+
   return (
-    <footer className="footer-bgg border-top py-5 bg-light text-dark">
-      <div className="container">
-        <div className="row">
-          {/* Logo and Description */}
-          <div className="col-lg-3 col-md-6 mb-4 border-end">
-            <img
-              src={logo}
-              alt="TechnoPower Lab Logo"
-              className="mb-2"
-              style={{ maxHeight: 60 }}
-            />
-            <p className="mt-2">
-              TechnoPower Tech Solutions is working on new international standard for developing quality, administrative and technical systems.
-            </p>
-            <div className="d-flex gap-3">
-              <a href="https://www.facebook.com/krishnalabbpl" target="_blank" rel="noopener noreferrer">
-                <FaFacebook size={20} />
-              </a>
-              <a href="https://www.instagram.com/krishnalabbpl/" target="_blank" rel="noopener noreferrer">
-                <FaInstagram size={20} />
-              </a>
+    <footer className="footer-section">
+      <div className="footer-content">
+        <div className="container">
+          <div className="row g-4">
+            {/* Company Information */}
+            <div className="col-lg-4 col-md-6">
+              <div className="footer-column">
+                <div className="footer-brand">
+                  <img
+                    src={logo}
+                    alt="TechnoPower Tech Solutions Logo"
+                    className="footer-logo"
+                  />
+                  <h5 className="brand-name">TechnoPower Tech Solutions</h5>
+                </div>
+                
+                <p className="company-description">
+                  TechnoPower Tech Solutions is working on new international standards for developing quality, administrative and technical systems with NABL accreditation.
+                </p>
+
+                <div className="contact-info">
+                  <div className="contact-item">
+                    <FaMapMarkerAlt className="contact-icon" />
+                    <span>No.1, RAF Building, Special Area, Shed No.11, B-Block, 60 Feet Rd, Govindpura Industrial Area, Bhopal, Madhya Pradesh 462023</span>
+                  </div>
+                  
+                  <div className="contact-item">
+                    <FaEnvelope className="contact-icon" />
+                    <a href="mailto:technolab12@gmail.com" className="contact-link">
+                      technolab12@gmail.com
+                    </a>
+                  </div>
+                  
+                  <div className="contact-item">
+                    <FaPhoneVolume className="contact-icon" />
+                    <a href="tel:+919425813624" className="contact-link">
+                      +91-9425 813 624
+                    </a>
+                  </div>
+                  
+                  <div className="contact-item">
+                    <FaClock className="contact-icon" />
+                    <span>Mon-Sat: 10:00am to 6:00pm</span>
+                  </div>
+                </div>
+
+                <div className="social-links">
+                  <h6>Follow Us</h6>
+                  <div className="social-icons">
+                    <a 
+                      href="https://www.facebook.com/krishnalabbpl" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link facebook"
+                      aria-label="Follow us on Facebook"
+                    >
+                      <FaFacebook />
+                    </a>
+                    <a 
+                      href="https://www.instagram.com/krishnalabbpl/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="social-link instagram"
+                      aria-label="Follow us on Instagram"
+                    >
+                      <FaInstagram />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Contact Form */}
+            <div className="col-lg-4 col-md-6">
+              <div className="footer-column">
+                <div className="section-header">
+                  <span className="header-accent">▴</span>
+                  <h5>Connect with us / Get Quote</h5>
+                </div>
+                
+                <form ref={form} onSubmit={sendEmail} className="contact-form">
+                  <div className="form-group">
+                    <input 
+                      type="text" 
+                      name="user_name" 
+                      className="form-input" 
+                      placeholder="Your Name*" 
+                      required 
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <input 
+                      type="email" 
+                      name="user_email" 
+                      className="form-input" 
+                      placeholder="Your Email*" 
+                      required 
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  
+                  <div className="form-group">
+                    <textarea 
+                      name="message" 
+                      rows="3" 
+                      className="form-input" 
+                      placeholder="Your Message*" 
+                      required
+                      disabled={isSubmitting}
+                    ></textarea>
+                  </div>
+                  
+                  <button 
+                    type="submit" 
+                    className={`submit-btn ${isSubmitting ? 'submitting' : ''} ${submitStatus}`}
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="spinner"></span>
+                        Sending...
+                      </>
+                    ) : submitStatus === 'success' ? (
+                      <>
+                        <FaCheckCircle />
+                        Sent Successfully!
+                      </>
+                    ) : (
+                      <>
+                        <FaPaperPlane />
+                        Send Message
+                      </>
+                    )}
+                  </button>
+                  
+                  {submitStatus === 'error' && (
+                    <div className="error-message">
+                      Failed to send message. Please try again.
+                    </div>
+                  )}
+                </form>
+              </div>
+            </div>
+
+            {/* Map */}
+            <div className="col-lg-4 col-md-12">
+              <div className="footer-column">
+                <h5 className="map-title">Find Us Here</h5>
+                <div className="map-container">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.075943348692!2d77.434058!3d23.268285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c69003af7be0d%3A0xf16be2bdff75e7a3!2sTECHNOPOWER%20TECH%20SOLUTIONS%20LLP!5e0!3m2!1sen!2sin!4v1694340079339!5m2!1sen!2sin"
+                    className="map-iframe"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="TechnoPower Tech Solutions Location"
+                  />
+                </div>
+                
+                <div className="map-info">
+                  <p><strong>Visit Our Laboratory</strong></p>
+                  <p className="text-muted">NABL Accredited Testing Facility</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Quick Links */}
-          <div className="col-lg-3 col-md-6 mb-4 border-end">
-            <h5 className="fw-bold">Quick Links</h5>
-            <ul className="list-unstyled">
-              <li><a href="#about" className="text-decoration-none text-dark">About Us</a></li>
-              <li><a href="#contact" className="text-decoration-none text-dark">Contact Us</a></li>
-              <li><a href="#services" className="text-decoration-none text-dark">Facilities</a></li>
-            </ul>
-          </div>
-
-          {/* Map Section */}
-          <div className="col-lg-3 col-md-12 mb-4 border-end">
-            <h5 className="fw-bold">Find Us Here</h5>
-            <div className="ratio ratio-4x3">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.075943348692!2d77.434058!3d23.268285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c69003af7be0d%3A0xf16be2bdff75e7a3!2sTECHNOPOWER%20TECH%20SOLUTIONS%20LLP!5e0!3m2!1sen!2sin!4v1694340079339!5m2!1sen!2sin"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="TechnoPower Tech Solutions Location"
-              />
+        </div>
+      </div>
+      
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <p className="copyright">
+                Copyright © 2025 TechnoPower Tech Solutions. All rights reserved.
+              </p>
             </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="col-lg-3 col-md-6 mb-4">
-            <h5 className="fw-bold">Get In Touch</h5>
-            <p><FaMapMarkerAlt className="me-2" /> No.1, RAF Building, Special Area, Shed No.11,B- Block, 60 Feet Rd, Govindpura Industrial Area, Bhopal, Madhya Pradesh 462023</p>
-            <p><FaEnvelope className="me-2" /> <a href="mailto:krishnalab12@gmail.com" className="text-dark">technolab12@gmail.com</a></p>
-            <p><FaPhoneVolume className="me-2" /> <a href="tel:+919425813624" className="text-dark">+91-9425 813 624</a></p>
-            <p><FaClock className="me-2" /> Mon-Sat: 10:00am to 6:00pm</p>
           </div>
         </div>
       </div>
