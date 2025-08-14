@@ -23,13 +23,14 @@
 
 .info-icon {
   font-size: 40px;
-  color: #8B4513; /* Brown color to match your theme */
+  color: #133f8b; /* Brown color to match your theme */
   margin-top: 5px;
   flex-shrink: 0;
 }
 
 .info-content {
   flex: 1;
+  padding-left: 1mm;
 }
 
 .info-box h5 {

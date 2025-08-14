@@ -21,7 +21,7 @@
 .slider-image {
   width: 100%;
   height: 600px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* Brown overlay - only covers left quarter */
@@ -29,7 +29,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 30%;
+  width: 20%;
   height: 100%;
   background: linear-gradient(135deg, 
     rgba(28, 105, 168, 0.9) 0%, 
@@ -58,7 +58,7 @@
 
 .quote-button {
   background-color: white;
-  color: #8B4513;
+  color: #13458b;
   border: none;
   padding: 15px 35px;
   border-radius: 50px;
@@ -111,7 +111,7 @@
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .content-overlay {
-    width: 70%;
+    width: 38%;
   }
   
   .hero-content {

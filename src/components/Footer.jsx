@@ -10,7 +10,7 @@ import {
   FaCheckCircle
 } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
-import logo from '../assets/icons/logo.jpg';
+import logo from '../assets/icons/logo.png';
 import "../styles/Footer.css"
 
 function Footer() {
@@ -72,38 +72,14 @@ function Footer() {
                   
                   <div className="contact-item">
                     <FaPhoneVolume className="contact-icon" />
-                    <a href="tel:+919425813624" className="contact-link">
-                      +91-9425 813 624
+                    <a href="tel:+917987815524" className="contact-link">
+                      +91-7987815524
                     </a>
                   </div>
                   
                   <div className="contact-item">
                     <FaClock className="contact-icon" />
                     <span>Mon-Sat: 10:00am to 6:00pm</span>
-                  </div>
-                </div>
-
-                <div className="social-links">
-                  <h6>Follow Us</h6>
-                  <div className="social-icons">
-                    <a 
-                      href="https://www.facebook.com/krishnalabbpl" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="social-link facebook"
-                      aria-label="Follow us on Facebook"
-                    >
-                      <FaFacebook />
-                    </a>
-                    <a 
-                      href="https://www.instagram.com/krishnalabbpl/" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="social-link instagram"
-                      aria-label="Follow us on Instagram"
-                    >
-                      <FaInstagram />
-                    </a>
                   </div>
                 </div>
               </div>

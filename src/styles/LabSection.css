@@ -44,23 +44,46 @@
 
 .image-overlay {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
+  top: 5px; /* keep them at the top */
+  left: 45px;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+   /* space between badges */
   z-index: 2;
 }
 
 .certification-badge {
-  background: rgba(56, 99, 191, 0.95);
+  background: #2a66b1; /* blue background */
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 6px 12px;
   border-radius: 50px;
-  display: flex;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 0.9rem;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(56, 99, 191, 0.3);
+}
+
+.image-overla {
+  position: absolute;
+  top: 60px; /* keep them at the top */
+  left: 0px;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  /* space between badges */
+  z-index: 2;
+}
+
+.certification-badg {
+  background: #2a66b1; /* blue background */
+  color: white;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: bold;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
 }
 
 .badge-icon {

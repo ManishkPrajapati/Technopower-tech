@@ -1,7 +1,9 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaCertificate, FaAward, FaCheckCircle } from "react-icons/fa";
-import labImage from '../assets/slider/WhatsApp4.jpg'
+import { SiCssdesignawards } from "react-icons/si";
+import { PiCertificate } from "react-icons/pi";
+import labImage from '../assets/slider/front_office.jpg';
 import "../styles/LabSection.css";
 
 const LabSection = () => {
@@ -19,10 +21,17 @@ const LabSection = () => {
               />
               <div className="image-overlay">
                 <div className="certification-badge">
-                  <FaCertificate className="badge-icon" />
+                  <SiCssdesignawards className="badge-icon" />
                   <span>NABL Certified</span>
                 </div>
               </div>
+              <div className="image-overla">
+                <div className="certification-badg">
+                  <SiCssdesignawards className="badge-icon" />
+                  <span>BIS Certified</span>
+                </div>
+              </div>
+              
             </div>
           </Col>
 
@@ -42,15 +51,14 @@ const LabSection = () => {
               
               <div className="content-body">
                 <p className="main-description">
-                  TechnoPower Tech Solutions is an accredited laboratory from the 
-                  <strong> National Accreditation Board for Testing and Calibration Laboratories (NABL)</strong>, 
-                  an autonomous body under the aegis of the Department of Science & Technology, Government of India.
+                  TechnoPower Tech Solutions specializes in comprehensive transformer testing services.
+                  Equipped to Test transformers up to 350 KVA, we ensure Reliable and Accurate results for a wide range of transformer types with precision-driven diagnostics and advanced testing capabilities.
                 </p>
                 
                 <div className="certification-details">
                   <div className="cert-item">
                     <FaCheckCircle className="cert-icon" />
-                    <span><strong>Certification No:</strong> 7016</span>
+                    <span><strong>Certification No:</strong> 15808</span>
                   </div>
                   <div className="cert-item">
                     <FaCheckCircle className="cert-icon" />
@@ -60,15 +68,6 @@ const LabSection = () => {
                     <FaCheckCircle className="cert-icon" />
                     <span><strong>Standards:</strong> ISO/IEC 17025:2017</span>
                   </div>
-                </div>
-
-                <div className="cta-section">
-                  <Button className="lab-cta-button me-3">
-                    View Certifications
-                  </Button>
-                  <Button variant="outline-primary" className="lab-outline-button">
-                    Learn More
-                  </Button>
                 </div>
               </div>
             </div>

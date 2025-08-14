@@ -250,7 +250,7 @@
 }
 
 .contact-btn {
-  background: linear-gradient(135deg, #8B4513, #a0522d);
+  background: linear-gradient(135deg, #13398b, #223ea3);
   border: none;
   padding: 0.8rem 2rem;
   border-radius: 25px;
@@ -260,7 +260,7 @@
 }
 
 .contact-btn:hover {
-  background: linear-gradient(135deg, #6d3410, #8B4513);
+  background: linear-gradient(135deg, #2d5dab, #3b7acc);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
 }
