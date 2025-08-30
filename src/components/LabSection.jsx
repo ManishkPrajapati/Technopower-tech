@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { FaCertificate, FaAward, FaCheckCircle } from "react-icons/fa";
 import { SiCssdesignawards } from "react-icons/si";
 import { PiCertificate } from "react-icons/pi";
-import labImage from '../assets/slider/front_office.jpg';
+import labImage from '../assets/images/front_gate.jpg';
 import "../styles/LabSection.css";
 
 const LabSection = () => {
