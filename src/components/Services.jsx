@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaArrowRight, FaCog, FaCheckCircle } from 'react-icons/fa';
-import machine1 from '../assets/images/testing.jpg';
+import machine1 from '../assets/images/testing_1.jpg';
 import "../styles/Services.css"
 
 const services = [
@@ -76,14 +76,6 @@ function Services() {
                       </li>
                     ))}
                   </ul>
-
-                  {/* CTA Button */}
-                  <div className="service-cta">
-                    <a href={service.link} className="service-btn">
-                      <span>Read More</span>
-                      <FaArrowRight className="btn-icon" />
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>

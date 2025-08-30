@@ -65,15 +65,15 @@ function Footer() {
                   
                   <div className="contact-item">
                     <FaEnvelope className="contact-icon" />
-                    <a href="mailto:technolab12@gmail.com" className="contact-link">
-                      technolab12@gmail.com
+                    <a href=" technopower.tech.solu@gmail.com" className="contact-link">
+                       technopower.tech.solu@gmail.com
                     </a>
                   </div>
                   
                   <div className="contact-item">
                     <FaPhoneVolume className="contact-icon" />
-                    <a href="tel:+917987815524" className="contact-link">
-                      +91-7987815524
+                    <a href="tel:+917554517726" className="contact-link">
+                      +917554517726
                     </a>
                   </div>
                   

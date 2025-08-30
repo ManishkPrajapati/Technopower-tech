@@ -1,5 +1,5 @@
 import React from 'react';
-import machine1 from '../assets/images/ct_testing.jpg';
+import machine1 from '../assets/images/machine.jpg';
 import isoImg from '../assets/images/iso.jpg';
 import nablImg from '../assets/images/nabl.jpg';
 import bis from '../assets/images/BIS.jpg';
