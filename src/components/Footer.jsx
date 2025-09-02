@@ -72,10 +72,12 @@ function Footer() {
                   
                   <div className="contact-item">
                     <FaPhoneVolume className="contact-icon" />
-                    <a href="tel:+917554517726" className="contact-link">
-                      +917554517726
-                    </a>
+                    <div className="contact-link">
+                      <a href="tel:+917554517726">+91 75545 17726</a> |{" "}
+                      <a href="tel:+916232179524">+91 62321 79524</a>
+                    </div>
                   </div>
+
                   
                   <div className="contact-item">
                     <FaClock className="contact-icon" />
