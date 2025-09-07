@@ -101,7 +101,7 @@ function Footer() {
                       type="text" 
                       name="user_name" 
                       className="form-input" 
-                      placeholder="Your Name*" 
+                      placeholder="Your Name" 
                       required 
                       disabled={isSubmitting}
                     />
@@ -112,8 +112,17 @@ function Footer() {
                       type="email" 
                       name="user_email" 
                       className="form-input" 
-                      placeholder="Your Email*" 
+                      placeholder="Your Email" 
                       required 
+                      disabled={isSubmitting}
+                    />
+                  </div>
+                  <div className="form-group">
+                    <input 
+                      type="tel" 
+                      name="user_contact" 
+                      className="form-input" 
+                      placeholder="Your Contact" 
                       disabled={isSubmitting}
                     />
                   </div>
@@ -123,7 +132,7 @@ function Footer() {
                       name="message" 
                       rows="3" 
                       className="form-input" 
-                      placeholder="Your Message*" 
+                      placeholder="Your Message" 
                       required
                       disabled={isSubmitting}
                     ></textarea>
